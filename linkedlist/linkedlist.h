@@ -1,5 +1,3 @@
-#include <iostream>
-
 #ifndef _LINKED_LIST
 #define _LINKED_LIST
 

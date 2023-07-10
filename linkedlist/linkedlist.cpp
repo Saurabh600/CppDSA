@@ -1,7 +1,10 @@
+#include <iostream>
+
 #include "linkedlist.h"
 
 #ifdef _LINKED_LIST
 
+// get size of linkedlist
 int LinkedList::Singly::size() {
     if (!this->head_ptr)
         return 0;
@@ -13,6 +16,7 @@ int LinkedList::Singly::size() {
     return len;
 }
 
+// retrive element at given index
 int LinkedList::Singly::at(int index) {
     if (index < 0 || index >= this->size())
         return 0;
@@ -25,6 +29,7 @@ int LinkedList::Singly::at(int index) {
     return temp->data;
 }
 
+// insert element at the end of list
 void LinkedList::Singly::push_back(int data) {
     if (!this->head_ptr) {
         this->head_ptr = new _singly_node(data);
@@ -39,12 +44,14 @@ void LinkedList::Singly::push_back(int data) {
     temp->next_ptr = new _singly_node(data);
 }
 
+// insert element at the beginning of list
 void LinkedList::Singly::push_front(int data) {
     auto new_node = new _singly_node(data);
     new_node->next_ptr = this->head_ptr;
     this->head_ptr = new_node;
 }
 
+// insert at an index positon
 bool LinkedList::Singly::insert(int index, int data) {
     if (index < 0 || index > this->size())
         return false;
@@ -68,6 +75,7 @@ bool LinkedList::Singly::insert(int index, int data) {
     return true;
 }
 
+// update element at an index
 bool LinkedList::Singly::update(int index, int data) {
     if (index < 0 || index >= this->size())
         return false;
@@ -82,6 +90,7 @@ bool LinkedList::Singly::update(int index, int data) {
     return true;
 }
 
+// dispaly linkedlist
 void LinkedList::Singly::display() {
     if (!this->head_ptr) {
         std::cout << "linkedlist is empty!!\n";
