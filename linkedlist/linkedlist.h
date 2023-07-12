@@ -26,6 +26,17 @@ class Singly {
   public:
     Singly() : head_ptr(nullptr) {}
 
+    ~Singly() {
+        auto temp = this->head_ptr;
+        auto temp_prev = temp;
+
+        while (temp) {
+            temp = temp->next_ptr;
+            delete temp_prev;
+            temp_prev = temp;
+        }
+    }
+
     int size();
     int at(int index);
     void push_back(int data);

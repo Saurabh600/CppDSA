@@ -2,7 +2,7 @@
 
 #include "linkedlist.h"
 
-int32_t main(void) {
+void foo() {
     std::cout << "Hello, World!\n";
     LinkedList::Singly num_bucket;
     num_bucket.push_back(20);
@@ -35,5 +35,9 @@ int32_t main(void) {
 
     num_bucket.insert(5, 55);
     num_bucket.display();
+}
+
+int32_t main(void) {
+    foo();
     return EXIT_SUCCESS;
 }
