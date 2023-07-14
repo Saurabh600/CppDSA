@@ -1,13 +1,13 @@
-CC = clang++
+CC = g++
 CFLAGS = -O
 
 all: build run
 
 build: main.o linkedlist.o
-	$(CC) $(CFLAGS) -o ../bin/app main.o linkedlist.o
+	$(CC) $(CFLAGS) -o app.out main.o linkedlist.o
 
-run: ../bin/app
-	@../bin/app
+run: app.out
+	@./app.out
 
 main.o: main.cpp
 	$(CC) $(CFLAGS) -c main.cpp
@@ -16,4 +16,4 @@ linkedlist.o: linkedlist.cpp
 	$(CC) $(CFLAGS) -c linkedlist.cpp
 
 clean:
-	@rm -fv *.o
+	@rm -fv *.o app.out
