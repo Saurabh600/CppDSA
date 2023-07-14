@@ -1,8 +1,8 @@
 #include <iostream>
 
-#include "linkedlist.h"
+#include "linkedlist.hpp"
 
-void foo() {
+void test_linkedlist() {
     std::cout << "Hello, World!\n";
     LinkedList::Singly num_bucket;
     num_bucket.push_back(20);
@@ -38,6 +38,6 @@ void foo() {
 }
 
 int32_t main(void) {
-    foo();
+    test_linkedlist();
     return EXIT_SUCCESS;
 }

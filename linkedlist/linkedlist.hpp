@@ -1,5 +1,4 @@
-#ifndef _LINKED_LIST
-#define _LINKED_LIST
+#pragma once
 
 namespace LinkedList {
 class _singly_node {
@@ -82,5 +81,3 @@ class DoublyCircular {
     void print();
 };
 } // namespace LinkedList
-
-#endif

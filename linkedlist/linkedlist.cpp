@@ -1,8 +1,6 @@
 #include <iostream>
 
-#include "linkedlist.h"
-
-#ifdef _LINKED_LIST
+#include "linkedlist.hpp"
 
 // get size of linkedlist
 int LinkedList::Singly::size() {
@@ -104,5 +102,3 @@ void LinkedList::Singly::display() {
     } while (temp->next_ptr);
     std::cout << temp->data << std::endl;
 }
-
-#endif
