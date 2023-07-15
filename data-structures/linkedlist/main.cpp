@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "linkedlist.h"
+#include "linkedlist.hpp"
 
 void test_linkedlist() {
     std::cout << "Hello, World!\n";
