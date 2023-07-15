@@ -24,17 +24,7 @@ class Singly {
 
   public:
     Singly() : head_ptr(nullptr) {}
-
-    ~Singly() {
-        auto temp = this->head_ptr;
-        auto temp_prev = temp;
-
-        while (temp) {
-            temp = temp->next_ptr;
-            delete temp_prev;
-            temp_prev = temp;
-        }
-    }
+    ~Singly();
 
     int size();
     int at(int index);
@@ -51,6 +41,8 @@ class Doubly {
 
   public:
     Doubly() : head_ptr(nullptr) {}
+    ~Doubly();
+
     void push_back(int data);
     void push_front(int data);
     bool insert(int index, int data);
@@ -63,6 +55,8 @@ class SinglyCircular {
 
   public:
     SinglyCircular() : head_ptr(nullptr) {}
+    ~SinglyCircular();
+
     void push_back(int data);
     void push_front(int data);
     bool insert(int index, int data);
@@ -75,6 +69,8 @@ class DoublyCircular {
 
   public:
     DoublyCircular() : head_ptr(nullptr) {}
+    ~DoublyCircular();
+
     void push_back(int data);
     void push_front(int data);
     bool insert(int index, int data);

@@ -1,6 +1,21 @@
 #include <iostream>
 
-#include "linkedlist.hpp"
+#include "linkedlist.h"
+
+/**
+ * Singly LinkedList Destructor,
+ * deallocates all memory of allocated nodes
+ */
+LinkedList::Singly::~Singly() {
+    auto temp = this->head_ptr;
+    auto temp_prev = temp;
+
+    while (temp) {
+        temp = temp->next_ptr;
+        delete temp_prev;
+        temp_prev = temp;
+    }
+}
 
 // get size of linkedlist
 int LinkedList::Singly::size() {
