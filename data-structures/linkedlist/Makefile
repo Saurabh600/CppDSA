@@ -1,7 +1,7 @@
-CC = g++
-CFLAGS = -O
+CC = clang++
+CFLAGS = -O -g -Wall
 
-all: build run
+all: build run clean
 
 build: main.o linkedlist.o
 	$(CC) $(CFLAGS) -o app.out main.o linkedlist.o

@@ -4,9 +4,9 @@ namespace LinkedList {
 class _singly_node {
   public:
     int data;
-    _singly_node *next_ptr;
+    _singly_node *next;
 
-    _singly_node(int data) : data(data), next_ptr(nullptr) {}
+    _singly_node(int data) : data(data), next(nullptr) {}
 };
 
 class _doubly_node {
@@ -20,10 +20,10 @@ class _doubly_node {
 
 class Singly {
   private:
-    _singly_node *head_ptr;
+    _singly_node *head;
 
   public:
-    Singly() : head_ptr(nullptr) {}
+    Singly() : head(nullptr) {}
     ~Singly();
 
     int size();
